@@ -1,0 +1,28 @@
+
+<app-my-loader></app-my-loader>
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Isbn</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let b of Users; let i = index">
+        <th scope="row">{{i+1}}</th>
+        <td>{{b.name}}</td>
+        <td>{{b.email}}</td>
+        <td>{{b.password}}</td>
+        <td class="text-center">
+          <button class="btn btn-sm btn-primary" routerLink="/edit-book/{{book._id}}">Edit</button>
+          <button class="btn btn-sm btn-danger" (click)="delete(book._id, i)">Delete</button>
+          </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
